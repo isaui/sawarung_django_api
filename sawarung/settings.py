@@ -34,13 +34,13 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'daphne',
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
@@ -107,7 +107,7 @@ CHANNEL_LAYERS = {
 }
 
 
-WSGI_APPLICATION = 'sawarung.wsgi.application'
+#WSGI_APPLICATION = 'sawarung.wsgi.application'
 ASGI_APPLICATION = 'sawarung.asgi.application' 
 
 # Database
