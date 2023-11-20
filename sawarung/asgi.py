@@ -19,7 +19,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sawarung.settings')
 
 application = ProtocolTypeRouter({
   'http': get_asgi_application(),
-  'websocket': AllowedHostsOriginValidator(
+  'websocket': 
             AuthMiddlewareStack(URLRouter(channel_routing.websocket_urlpatterns))
-        )
 })
