@@ -17,9 +17,10 @@ from .consumer import ProductConsumer
 import sawarung.channel_routing as channel_routing
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sawarung.settings')
+django_asgi_app = get_asgi_application()
 django.setup()
 application = ProtocolTypeRouter({
-  'http': get_asgi_application(),
+  'http': django_asgi_app,
   'websocket': AllowedHostsOriginValidator(
             AuthMiddlewareStack(URLRouter(channel_routing.websocket_urlpatterns))
         )

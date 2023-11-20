@@ -10,5 +10,5 @@ django-cors-headers
 channels
 channels-redis
 daphne
-uvicorn
+uvicorn[standard]
 psycopg2
